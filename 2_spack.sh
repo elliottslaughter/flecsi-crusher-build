@@ -2,7 +2,7 @@
 
 set -e
 
-git clone -c feature.manyFiles=true https://github.com/spack/spack.git
+git clone -b releases/v0.18 -c feature.manyFiles=true https://github.com/spack/spack.git
 
 . spack/share/spack/setup-env.sh
 

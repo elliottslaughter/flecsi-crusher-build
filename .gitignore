@@ -1,0 +1,10 @@
+*~
+
+/flecsi
+/gasnet
+/kokkos
+/legion
+/spack
+
+*.o
+

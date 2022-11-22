@@ -11,3 +11,9 @@ fi
 export SPACK_DISABLE_LOCAL_CONFIG=1
 # After this:
 # packages.yaml will live in spack/etc/spack/packages.yaml
+
+export RISTRA_INSTALL_PREFIX=$PWD/install
+
+export CMAKE_PREFIX_PATH="$RISTRA_INSTALL_PREFIX/kokkos:$CMAKE_PREFIX_PATH"
+
+export THREADS=64

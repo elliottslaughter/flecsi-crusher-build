@@ -6,6 +6,9 @@ module load rocm/5.3.0 # for good measure
 if [[ -d spack ]]; then
     . spack/share/spack/setup-env.sh
     spack env activate ristra-rocmcc
+
+    # Not sure why we need this, but otherwise it fails to detect xpmem
+    export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/cray/xpmem/2.4.4-2.3_11.2__gff0e1d9.shasta/lib64/pkgconfig"
 fi
 
 # Do not look in either $HOME/.spack or any system files. This is to avoid

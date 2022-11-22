@@ -1,0 +1,15 @@
+packages:
+  all:
+    providers:
+      mpi:
+      - cray-mpich
+  cray-mpich:
+    buildable: false
+    compiler: []
+    externals:
+      - modules:
+          - cray-mpich/8.1.17
+        spec: cray-mpich@8.1.17
+    providers: {}
+    target: []
+    version: [8.1.17]

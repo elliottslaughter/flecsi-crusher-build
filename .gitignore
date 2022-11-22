@@ -6,5 +6,7 @@
 /legion
 /spack
 
+/install
+
 *.o
 

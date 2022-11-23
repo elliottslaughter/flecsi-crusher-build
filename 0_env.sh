@@ -1,7 +1,7 @@
 module load PrgEnv-amd
 module load cray-pmi
 module load amd/5.3.0 # this is how you configure the ROCm version in the Cray programming environment
-module load rocm/5.3.0 # for good measure
+# module load rocm/5.3.0 # so far it doesn't look like I need this
 
 if [[ -d spack ]]; then
     . spack/share/spack/setup-env.sh

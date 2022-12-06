@@ -3,6 +3,8 @@ module load cray-pmi
 module load amd/5.3.0 # this is how you configure the ROCm version in the Cray programming environment
 # module load rocm/5.3.0 # so far it doesn't look like I need this
 
+module load cmake/3.23.2 # need newer CMake for https://gitlab.kitware.com/cmake/cmake/-/merge_requests/6264
+
 if [[ -d spack ]]; then
     . spack/share/spack/setup-env.sh
     spack env activate ristra-rocmcc

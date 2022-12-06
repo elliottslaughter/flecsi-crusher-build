@@ -5,6 +5,6 @@ set -e
 source 0_env.sh
 
 cd flecsi/tutorial/standalone/poisson
-CC=cc CXX=CC cmake -Bbuild
+CC=hipcc CXX=hipcc CFLAGS="-I${MPICH_DIR}/include" CXXFLAGS="-I${MPICH_DIR}/include" LDFLAGS="-L${MPICH_DIR}/lib -lmpi" cmake -Bbuild
 cd build
 make -j${THREADS:-16}

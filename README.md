@@ -9,4 +9,6 @@ Follow the steps in order:
 ./4_gasnet.sh
 ./5_legion.sh
 ./6_flecsi.sh
+./7_poisson.sh
+sbatch --nodes 1 8_run.sh
 ```

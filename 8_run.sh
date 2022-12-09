@@ -6,4 +6,4 @@
 
 nodes=$SLURM_JOB_NUM_NODES
 
-srun -n $nodes ./flecsi/tutorial/standalone/poisson/build/app/poisson 1000 1000 --backend-args='-ll:gpu 1'
+srun -n $(( nodes * 8 )) --cpus-per-task $(( 64 / 8 )) --gpus-per-task 1 ./flecsi/tutorial/standalone/poisson/build/app/poisson -m 5000 -t 1e-64 8000 8000 --backend-args='-ll:gpu 1 -ll:csize 16G -ll:fsize 16G'
